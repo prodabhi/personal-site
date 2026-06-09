@@ -5,7 +5,7 @@ type Size = "feature" | "wide" | "tall" | "small";
 type Card = {
   href: string;
   size: Size;
-  kind: "essay" | "thread" | "note" | "experiment" | "blog";
+  kind: "essay" | "thread" | "article" | "note" | "experiment" | "blog";
   date: string;
   title: string;
   cover: ReactNode;
@@ -21,6 +21,7 @@ const SIZE_CLASSES: Record<Size, string> = {
 const KIND_LABEL: Record<Card["kind"], string> = {
   essay: "essay",
   thread: "𝕏 thread",
+  article: "𝕏 article",
   note: "notes",
   experiment: "experiment",
   blog: "blog",
@@ -103,74 +104,31 @@ function FeatureCover() {
 }
 
 function ThreadCover({
-  count,
-  excerpt,
+  label,
+  date,
   bg = "bg-paper",
   text = "text-ink",
 }: {
-  count: string;
-  excerpt: string;
+  label: string;
+  date: string;
   bg?: string;
   text?: string;
 }) {
   return (
     <div
-      className={`absolute inset-0 flex flex-col justify-between border border-ink/15 p-4 md:p-5 ${bg} ${text}`}
+      className={`absolute inset-0 flex flex-col justify-between p-4 md:p-5 ${bg} ${text}`}
     >
-      <div className="flex items-center justify-between">
-        <p className="font-mono text-[10px] uppercase tracking-wider opacity-70">
-          𝕏 thread
-        </p>
-        <p className="font-mono text-[10px] uppercase tracking-wider opacity-50">
-          {count}
-        </p>
-      </div>
-      <p className="font-serif text-lg italic leading-snug md:text-xl">
-        &ldquo;{excerpt}&rdquo;
+      <p className="font-mono text-3xl font-black leading-none opacity-90">𝕏</p>
+      <p className="font-serif text-lg italic leading-tight md:text-xl">
+        {label}
       </p>
-      <div className="flex gap-1">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <span
-            key={i}
-            className="h-1 w-1 rounded-full bg-current opacity-30"
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function DocsCover() {
-  return (
-    <div className="absolute inset-0 flex flex-col justify-between bg-ink p-4 text-paper md:p-5">
-      <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
-        notes
-      </p>
-      <p className="font-serif text-xl italic leading-tight text-paper md:text-2xl">
-        writing developer docs that don't lie.
-      </p>
-      <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
-        from the graph, 2024
+      <p className="font-mono text-[10px] uppercase tracking-wider opacity-40">
+        {date}
       </p>
     </div>
   );
 }
 
-function HalfBakedCover() {
-  return (
-    <div className="absolute inset-0 flex flex-col justify-between border-2 border-dashed border-ink/40 bg-paper p-4 text-ink md:p-5">
-      <p className="font-mono text-[10px] uppercase tracking-wider text-muted">
-        experiment
-      </p>
-      <p className="font-serif text-2xl italic leading-tight text-ink">
-        half-baked.
-      </p>
-      <p className="font-mono text-[10px] uppercase tracking-wider text-muted/80">
-        a partner-tracker on a single sheet
-      </p>
-    </div>
-  );
-}
 
 // ───────── data ─────────
 
@@ -227,63 +185,53 @@ const OTHER_CARDS: Card[] = [
     cover: <FeatureCover />,
   },
   {
-    href: "#",
+    href: "https://x.com/0xabhii/status/1839020951075520693",
     size: "small",
     kind: "thread",
-    date: "02 apr 2026",
-    title: "0→500 users at attenomics: the playbook",
+    date: "26 sep 2024",
+    title: "FHE is the next big thing",
     cover: (
       <ThreadCover
-        count="18 tweets"
-        excerpt="we shipped a working demo in 72 hours. then nothing happened for two weeks."
+        label="FHE is the next big thing."
+        date="26 sep 2024"
+        bg="bg-ink"
+        text="text-paper"
       />
     ),
   },
   {
-    href: "#",
+    href: "https://x.com/0xabhii/status/1847701620588499209",
     size: "small",
     kind: "thread",
-    date: "20 mar 2026",
-    title: "the wallet is the agent now",
+    date: "19 oct 2024",
+    title: "zero knowledge about zero knowledge",
     cover: (
       <ThreadCover
-        count="11 tweets"
-        excerpt="every wallet ux assumption breaks when an agent is signing."
+        label="zero knowledge about zero knowledge"
+        date="19 oct 2024"
         bg="bg-sage"
         text="text-paper"
       />
     ),
   },
   {
-    href: "#",
-    size: "small",
-    kind: "thread",
-    date: "11 mar 2026",
-    title: "10 lessons from 30 workshops in 10 cities",
+    href: "https://x.com/0xabhii/status/2060786801997226165",
+    size: "wide",
+    kind: "article",
+    date: "09 jun 2026",
+    title: "The Hardest Part of Crypto Nobody Talks About - Oracle",
     cover: (
-      <ThreadCover
-        count="14 tweets"
-        excerpt="the room teaches you what discord cannot."
-        bg="bg-rust"
-        text="text-paper"
-      />
+      <>
+        <img
+          src="/oracle-article.png"
+          alt="the oracle problem needs to be solved"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <p className="absolute left-4 top-4 font-mono text-3xl font-black leading-none text-white md:left-5 md:top-5">
+          𝕏
+        </p>
+      </>
     ),
-  },
-  {
-    href: "#",
-    size: "small",
-    kind: "note",
-    date: "11 feb 2026",
-    title: "writing developer docs that don't lie",
-    cover: <DocsCover />,
-  },
-  {
-    href: "#",
-    size: "small",
-    kind: "experiment",
-    date: "30 jan 2026",
-    title: "half-baked: partner-tracker on a google sheet",
-    cover: <HalfBakedCover />,
   },
 ];
 
@@ -390,7 +338,7 @@ function CardGrid({ cards }: { cards: Card[] }) {
                   {card.title}
                 </p>
                 <span className="shrink-0 font-mono text-[9px] uppercase tracking-wider text-rust md:text-[10px]">
-                  {isPlaceholder ? "soon" : `${KIND_LABEL[card.kind]} →`}
+                  {isPlaceholder ? "coming soon" : `${KIND_LABEL[card.kind]} →`}
                 </span>
               </div>
             </div>
@@ -412,8 +360,9 @@ export default function WritingPage() {
           the <span className="italic text-rust">notebook.</span>
         </h2>
         <p className="mt-5 max-w-[55ch] font-serif text-base font-light italic leading-relaxed text-ink/70 md:text-lg">
-          essays, field notes, and twitter threads. the pinned one is the long
-          version of the attenomics story.
+          technical blogs, crypto threads, and one honest post-mortem.
+          covering everything from zk proofs and FHE to oracles, restaking, and
+          the products i've built and broken along the way.
         </p>
       </div>
 
