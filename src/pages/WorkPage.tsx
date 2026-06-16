@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
       "onboarded ZyfAI, Vistara Labs, bond.credit, gigabrain.gg",
     ],
     stack: "account abstraction · agentic payments · ethereum",
-    status: "BD & partnerships · jul to dec 2025",
+    status: "CoFounder & Growth · jul to dec 2025",
   },
   {
     category: "socialfi · co-founder · paused",
@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
     status: "co-founder & coo · jan to jun 2025",
   },
   {
-    category: "ecosystem growth · the road",
+    category: "devrel & ecosystem growth · the road",
     name: "QONEQT",
     blurb:
       "Fourteen months on the road. Partnerships, workshops, and 2,000+ developers in person.",
@@ -49,7 +49,7 @@ const PROJECTS: Project[] = [
       "refined onboarding flows & tooling integrations with eng + design",
     ],
     stack: "huddle01 · sandbox · quillaudits · okto · router",
-    status: "BD & ecosystem growth · nov 2023 to dec 2024",
+    status: "DevRel & ecosystem growth · nov 2023 to dec 2024",
   },
 ];
 
@@ -148,7 +148,7 @@ export default function WorkPage() {
           </a>
 
           <a
-            href="http://stealth-pass.vercel.app"
+            href="https://ethglobal.com/showcase/encryptix-zevtt"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -169,7 +169,7 @@ export default function WorkPage() {
           </a>
 
           <a
-            href="https://ownsound-three.vercel.app"
+            href="https://devfolio.co/projects/ownsound-c1a3"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"

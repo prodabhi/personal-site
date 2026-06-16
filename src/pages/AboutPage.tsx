@@ -35,7 +35,7 @@ export default function AboutPage() {
             build on them.
           </p>
           <p className="mt-4 max-w-[55ch] font-serif text-base italic leading-relaxed text-ink/70 md:text-lg">
-            Previously BD at <span className="text-rust">Rheolly</span>,
+            Previously Built <span className="text-rust">Rheolly</span>,
             Attenomics, Qoneqt, and The Graph.
           </p>
 

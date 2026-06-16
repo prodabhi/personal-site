@@ -49,13 +49,13 @@ export default function ContactPage() {
       </ul>
 
       <a
-        href="/abhishek-yadav.pdf"
+        href="/0xabhii_FDE.pdf"
         download
         className="mt-14 inline-block border border-dashed border-ink/40 px-6 py-4 hover:border-rust hover:text-rust"
       >
         <div className="font-mono text-sm">↓ download resume</div>
         <div className="mt-1 font-mono text-[11px] text-muted">
-          abhishek-yadav.pdf
+          abhishek's resume
         </div>
       </a>
     </section>
