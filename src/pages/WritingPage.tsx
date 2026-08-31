@@ -81,28 +81,6 @@ function MegaethCover() {
 
 // ───────── other writing covers ─────────
 
-function FeatureCover() {
-  return (
-    <div className="absolute inset-0 flex flex-col justify-between bg-ink p-6 text-paper md:p-8">
-      <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
-        ★ pinned · post-mortem
-      </p>
-      <p className="font-serif text-3xl italic leading-[1.05] text-paper md:text-5xl">
-        attenomics
-        <br />
-        didn't fail
-        <br />
-        because the
-        <br />
-        idea was <span className="text-rust">wrong.</span>
-      </p>
-      <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
-        14 jun 2025 · 8 min read
-      </p>
-    </div>
-  );
-}
-
 function ThreadCover({
   label,
   date,
@@ -177,12 +155,26 @@ const QUICKNODE_BLOGS: Card[] = [
 
 const OTHER_CARDS: Card[] = [
   {
-    href: "#",
+    href: "https://medium.com/@0xabhii/autonomous-agents-at-the-edge-how-fleek-powers-decentralized-ai-b76a97a0ffc0?sharedUserId=0xabhii",
     size: "feature",
-    kind: "essay",
-    date: "14 jun 2025",
-    title: "attenomics didn't fail because the idea was wrong",
-    cover: <FeatureCover />,
+    kind: "article",
+    date: "31 aug 2026",
+    title: "Autonomous Agents at the Edge",
+    cover: (
+      <div
+        className="absolute inset-0 flex flex-col justify-between bg-ink p-6 text-paper md:p-8"
+      >
+        <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
+          ★ featured · article
+        </p>
+        <p className="font-serif text-3xl italic leading-[1.05] text-paper md:text-5xl">
+          autonomous agents at the edge
+        </p>
+        <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
+          31 aug 2026 · 12 min read
+        </p>
+      </div>
+    ),
   },
   {
     href: "https://x.com/0xabhii/status/1839020951075520693",
