@@ -38,7 +38,6 @@ function XstocksCover() {
     />
   );
 }
-
 function RestakeCover() {
   return (
     <img
@@ -79,34 +78,15 @@ function MegaethCover() {
   );
 }
 
-// ───────── other writing covers ─────────
-
-function ThreadCover({
-  label,
-  date,
-  bg = "bg-paper",
-  text = "text-ink",
-}: {
-  label: string;
-  date: string;
-  bg?: string;
-  text?: string;
-}) {
+function ImageCover({ src, alt }: { src: string; alt: string }) {
   return (
-    <div
-      className={`absolute inset-0 flex flex-col justify-between p-4 md:p-5 ${bg} ${text}`}
-    >
-      <p className="font-mono text-3xl font-black leading-none opacity-90">𝕏</p>
-      <p className="font-serif text-lg italic leading-tight md:text-xl">
-        {label}
-      </p>
-      <p className="font-mono text-[10px] uppercase tracking-wider opacity-40">
-        {date}
-      </p>
-    </div>
+    <img
+      src={src}
+      alt={alt}
+      className="absolute inset-0 h-full w-full object-cover"
+    />
   );
 }
-
 
 // ───────── data ─────────
 
@@ -156,25 +136,19 @@ const QUICKNODE_BLOGS: Card[] = [
 const OTHER_CARDS: Card[] = [
   {
     href: "https://medium.com/@0xabhii/autonomous-agents-at-the-edge-how-fleek-powers-decentralized-ai-b76a97a0ffc0?sharedUserId=0xabhii",
-    size: "feature",
+    size: "wide",
     kind: "article",
     date: "31 aug 2026",
     title: "Autonomous Agents at the Edge",
-    cover: (
-      <div
-        className="absolute inset-0 flex flex-col justify-between bg-ink p-6 text-paper md:p-8"
-      >
-        <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
-          ★ featured · article
-        </p>
-        <p className="font-serif text-3xl italic leading-[1.05] text-paper md:text-5xl">
-          autonomous agents at the edge
-        </p>
-        <p className="font-mono text-[10px] uppercase tracking-wider text-paper/60">
-          31 aug 2026 · 12 min read
-        </p>
-      </div>
-    ),
+    cover: <ImageCover src="/autonomous-agents-at-edge.webp" alt="Autonomous Agents at the Edge" />,
+  },
+  {
+    href: "https://x.com/0xabhii/status/2078481389218083308?s=20",
+    size: "wide",
+    kind: "article",
+    date: "11 sep 2026",
+    title: "Revenue Defensibility Across Stablecoins",
+    cover: <ImageCover src="/revenue-defensilblity.jpeg" alt="Revenue Defensibility Across Stablecoins" />,
   },
   {
     href: "https://x.com/0xabhii/status/1839020951075520693",
@@ -182,14 +156,7 @@ const OTHER_CARDS: Card[] = [
     kind: "thread",
     date: "26 sep 2024",
     title: "FHE is the next big thing",
-    cover: (
-      <ThreadCover
-        label="FHE is the next big thing."
-        date="26 sep 2024"
-        bg="bg-ink"
-        text="text-paper"
-      />
-    ),
+    cover: <ImageCover src="/fhe.png" alt="FHE is the next big thing" />,
   },
   {
     href: "https://x.com/0xabhii/status/1847701620588499209",
@@ -197,14 +164,7 @@ const OTHER_CARDS: Card[] = [
     kind: "thread",
     date: "19 oct 2024",
     title: "zero knowledge about zero knowledge",
-    cover: (
-      <ThreadCover
-        label="zero knowledge about zero knowledge"
-        date="19 oct 2024"
-        bg="bg-sage"
-        text="text-paper"
-      />
-    ),
+    cover: <ImageCover src="/zk.png" alt="Zero knowledge about zero knowledge" />,
   },
   {
     href: "https://x.com/0xabhii/status/2060786801997226165",
@@ -240,7 +200,7 @@ function QuickNodeSection() {
 
   return (
     <div className="flex flex-col gap-5 md:flex-row md:gap-6">
-      {/* Featured — left 50% */}
+      {/* Featured, left 50% */}
       <a
         href={featured.href}
         target="_blank"
@@ -266,7 +226,7 @@ function QuickNodeSection() {
         </div>
       </a>
 
-      {/* Side blogs — right 50%, vertical cards */}
+      {/* Side blogs, right 50%, vertical cards */}
       <div className="grid w-full grid-cols-2 gap-3 md:w-1/2 md:gap-4">
         {sideBlogs.map((blog) => (
           <a
@@ -366,6 +326,9 @@ export default function WritingPage() {
         <div className="mt-4">
           <QuickNodeSection />
         </div>
+        <p className="mt-5 font-mono text-[11px] uppercase tracking-wider text-muted">
+          hover a card to see the title · click to open
+        </p>
       </div>
 
       {/* Other writings */}

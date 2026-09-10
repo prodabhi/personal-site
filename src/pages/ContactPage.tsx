@@ -49,7 +49,7 @@ export default function ContactPage() {
       </ul>
 
       <a
-        href="/0xabhii_FDE.pdf"
+        href="/0xabhii_resume.pdf"
         download
         className="mt-14 inline-block border border-dashed border-ink/40 px-6 py-4 hover:border-rust hover:text-rust"
       >

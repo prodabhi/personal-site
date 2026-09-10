@@ -1,14 +1,14 @@
-# abhishek yadav — notebook
+# abhishek yadav - notebook
 
 > A small corner of the internet where I keep my work, words, and coordinates.
 
-This is the source for my personal site — a quiet, editorial place built to feel more like a notebook than a portfolio. No dark mode toggle. No particle effects. Just type, spacing, and the occasional cup of chai.
+This is the source for my personal site - a quiet, editorial place built to feel more like a notebook than a portfolio. No dark mode toggle. No particle effects. Just type, spacing, and the occasional cup of chai.
 
 ---
 
 ## Why this exists
 
-Most personal sites feel like billboards. I wanted mine to feel like a desk — something you linger on, not scroll past. The design borrows from print: generous margins, serif headlines, monospace annotations, and a warm, paper-like palette.
+Most personal sites feel like billboards. I wanted mine to feel like a desk - something you linger on, not scroll past. The design borrows from print: generous margins, serif headlines, monospace annotations, and a warm, paper-like palette.
 
 If you're here to judge the code, be gentle. If you're here to steal an idea, take two.
 
@@ -27,13 +27,13 @@ If you're here to judge the code, be gentle. If you're here to steal an idea, ta
 
 ## Stack
 
-- **Vite** — because life is too short for webpack
-- **React + TypeScript** — types are just tiny tests you don't have to write
-- **Tailwind CSS v4** — utility-first, no `@apply` guilt
-- **Wouter** — routing without the ceremony
-- **Framer Motion** — only where it matters
-- **Lora + IBM Plex Mono** — the only fonts you'll ever need
-- **Chai** — the real build tool
+- **Vite** - because life is too short for webpack
+- **React + TypeScript** - types are just tiny tests you don't have to write
+- **Tailwind CSS v4** - utility-first, no `@apply` guilt
+- **Wouter** - routing without the ceremony
+- **Framer Motion** - only where it matters
+- **Lora + IBM Plex Mono** - the only fonts you'll ever need
+- **Chai** - the real build tool
 
 ---
 
@@ -60,11 +60,11 @@ pnpm build
 
 ## Colophon
 
-- Design & code — me
-- Type — [Lora](https://fonts.google.com/specimen/Lora) (serif) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (monospace)
-- Colors — ink on paper, with a rust accent
+- Design & code - me
+- Type - [Lora](https://fonts.google.com/specimen/Lora) (serif) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (monospace)
+- Colors - ink on paper, with a rust accent
 - Built in Mumbai, 2026
-- Last deployed — probably while procrastinating on something else
+- Last deployed - probably while procrastinating on something else
 
 ---
 
