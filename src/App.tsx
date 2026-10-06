@@ -32,7 +32,7 @@ const projects: { name: string; copy: string; href?: string }[] = [
 const socials: { label: string; href: string; Icon: IconType }[] = [
   { label: "X", href: "https://x.com/0xabhii", Icon: FaXTwitter },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/0xabhii/", Icon: FaLinkedinIn },
-  { label: "GitHub", href: "https://github.com/Abhi270303", Icon: FaGithub },
+  { label: "GitHub", href: "https://github.com/prodabhi", Icon: FaGithub },
   { label: "Telegram", href: "https://t.me/oxabhii", Icon: FaTelegram },
   { label: "Email", href: "mailto:0xabhishekyadav@gmail.com", Icon: FaEnvelope },
 ];

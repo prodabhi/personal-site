@@ -43,7 +43,7 @@ Yes, you can actually steal this. That's the point.
 
 ```bash
 # Clone (it's not a crime, I put it here on purpose)
-git clone https://github.com/Abhi270303/personal-site.git
+git clone https://github.com/prodabhi/personal-site.git
 cd personal-site
 
 # Install the dependencies I definitely didn't over-engineer

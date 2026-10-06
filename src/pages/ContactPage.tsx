@@ -2,7 +2,7 @@ const SOCIALS = [
   { platform: "email", handle: "0xabhishekyadav@gmail.com", href: "mailto:0xabhishekyadav@gmail.com" },
   { platform: "twitter / x", handle: "@0xabhii", href: "https://x.com/0xabhii" },
   { platform: "linkedin", handle: "0xabhii", href: "https://www.linkedin.com/in/0xabhii/" },
-  { platform: "github", handle: "Abhi270303", href: "https://github.com/Abhi270303" },
+  { platform: "github", handle: "prodabhi", href: "https://github.com/prodabhi" },
   { platform: "portfolio", handle: "0xabhii.xyz", href: "https://0xabhii.xyz" },
   { platform: "telegram", handle: "@oxabhii", href: "https://t.me/oxabhii" },
   // { platform: "farcaster", handle: "@abhishek", href: "#" },
